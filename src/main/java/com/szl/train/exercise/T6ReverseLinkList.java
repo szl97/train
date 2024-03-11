@@ -40,7 +40,7 @@ public class T6ReverseLinkList {
     public static ListNode getTarget(ListNode h, int k) {
         ListNode target = h;
         int i = 0;
-        while (++i < k && target!= null) {
+        while (++i < k && target != null) {
             target = target.next;
         }
         return target;

@@ -2,9 +2,6 @@ package com.szl.train.exercise;
 
 import com.szl.train.model.UnionFind;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Author: Stan sai
  * Date: 2024/2/9 18:10

@@ -48,7 +48,7 @@ public class T9LevelOrderTree {
             if(cur.left == null && cur.right != null) {
                 return false;
             }
-            if(mustLeaf && !(cur.left != null && cur.right != null)) {
+            if(mustLeaf && cur.left != null) {
                 return false;
             }
             if(cur.left == null || cur.right == null) {

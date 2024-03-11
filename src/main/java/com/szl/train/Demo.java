@@ -79,44 +79,5 @@ public class Demo {
         for(int num : m) {
             System.out.printf("%d",num);
         }
-        System.out.println();
-        String s = "adadafsehqhvhqhi";
-        ByteArrayOutputStream bs = new ByteArrayOutputStream();
-        ObjectOutputStream os = new ObjectOutputStream(bs);
-        os.writeObject(new Record());
-        os.flush();
-        byte[] bytes = bs.toByteArray();
-        ByteBuffer buffer1 = ByteBuffer.allocateDirect(1024);
-        os.close();
-        bs.close();
-        buffer1.put(bytes);
-        buffer1.clear();
-        byte[] bytes1 = new byte[buffer1.limit() - buffer1.position()];
-        buffer1.get(bytes1);
-        ByteArrayInputStream bi = new ByteArrayInputStream(bytes1);
-        ObjectInputStream oi = new ObjectInputStream(bi);
-        Object o = oi.readObject();
-        oi.close();
-        bi.close();
-        System.out.println();
-    }
-
-    static class Record implements Serializable {
-        public Record() {
-
-        }
-        String key = UUID.randomUUID().toString();
-        Student student = new Student();
-    }
-
-    static class Student implements Serializable {
-        public Student() {
-
-        }
-        String name = "adhyqhuehuqehuiiu是缺u且飞机";
-        long id = 9L;
-        String phone = "76278147817893891893189";
-        String address = "阿护齿画画后期会期间急哦全集哦放假哦IE去切记哦飞机uhiqehuhui今";
-        String[] hobbies = new String[] {"ajjajk", "ajcfhiuqiuiueqiufheqo", "hjqehjhjeqjh"};
     }
 }
